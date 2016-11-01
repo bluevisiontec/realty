@@ -12,6 +12,7 @@
 *.idea
 *.project
 *.swp
+*.kdev4
 .buildpath
 .cache
 .project

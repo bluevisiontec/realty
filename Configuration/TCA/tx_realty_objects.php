@@ -4,6 +4,9 @@ defined('TYPO3_MODE') or die('Access denied.');
 return [
     'ctrl' => [
         'title' => 'LLL:EXT:realty/locallang_db.xml:tx_realty_objects',
+	'module' => array(
+		'name' => 'wizard_link',
+	),
         'label' => 'title',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
@@ -218,12 +221,16 @@ return [
                             'pid' => '###STORAGE_PID###',
                             'setValue' => 'prepend',
                         ],
-                        'script' => 'wizard_add.php',
+			'module' => array(
+				'name' => 'wizard_add',	
+			),
                     ],
                     'edit' => [
                         'type' => 'popup',
                         'title' => 'Edit',
-                        'script' => 'wizard_edit.php',
+			'module' => array(
+				'name' => 'wizard_edit'
+			),
                         'popup_onlyOpenIfSelected' => 1,
                         'icon' => 'edit2.gif',
                         'JSopenParams' => 'height=350,width=580,status=0,menubar=0,scrollbars=1',
@@ -253,12 +260,16 @@ return [
                             'pid' => '###STORAGE_PID###',
                             'setValue' => 'prepend',
                         ],
-                        'script' => 'wizard_add.php',
+                        'module' => array(
+                                'name' => 'wizard_add',
+                        ),
                     ],
                     'edit' => [
                         'type' => 'popup',
                         'title' => 'Edit',
-                        'script' => 'wizard_edit.php',
+                            'module' => array(
+                                    'name' => 'wizard_edit',
+                            ),
                         'popup_onlyOpenIfSelected' => 1,
                         'icon' => 'edit2.gif',
                         'JSopenParams' => 'height=350,width=580,status=0,menubar=0,scrollbars=1',
@@ -601,12 +612,16 @@ return [
                             'pid' => '###STORAGE_PID###',
                             'setValue' => 'prepend',
                         ],
-                        'script' => 'wizard_add.php',
+                            'module' => array(
+                                    'name' => 'wizard_add',
+                            ),
                     ],
                     'edit' => [
                         'type' => 'popup',
                         'title' => 'Edit',
-                        'script' => 'wizard_edit.php',
+                            'module' => array(
+                                    'name' => 'wizard_edit',
+                            ),
                         'popup_onlyOpenIfSelected' => 1,
                         'icon' => 'edit2.gif',
                         'JSopenParams' => 'height=350,width=580,status=0,menubar=0,scrollbars=1',
@@ -639,12 +654,16 @@ return [
                             'pid' => '###STORAGE_PID###',
                             'setValue' => 'prepend',
                         ],
-                        'script' => 'wizard_add.php',
+                            'module' => array(
+                                    'name' => 'wizard_add',
+                            ),
                     ],
                     'edit' => [
                         'type' => 'popup',
                         'title' => 'Edit',
-                        'script' => 'wizard_edit.php',
+                            'module' => array(
+                                    'name' => 'wizard_edit',
+                            ),
                         'popup_onlyOpenIfSelected' => 1,
                         'icon' => 'edit2.gif',
                         'JSopenParams' => 'height=350,width=580,status=0,menubar=0,scrollbars=1',
@@ -772,12 +791,16 @@ return [
                             'pid' => '###STORAGE_PID###',
                             'setValue' => 'prepend',
                         ],
-                        'script' => 'wizard_add.php',
+                            'module' => array(
+                                    'name' => 'wizard_add',
+                            ),
                     ],
                     'edit' => [
                         'type' => 'popup',
                         'title' => 'Edit',
-                        'script' => 'wizard_edit.php',
+                        'module' => array(
+                                'name' => 'wizard_edit',
+                        ),
                         'popup_onlyOpenIfSelected' => 1,
                         'icon' => 'edit2.gif',
                         'JSopenParams' => 'height=350,width=580,status=0,menubar=0,scrollbars=1',
@@ -838,12 +861,16 @@ return [
                             'pid' => '###STORAGE_PID###',
                             'setValue' => 'prepend',
                         ],
-                        'script' => 'wizard_add.php',
+                            'module' => array(
+                                    'name' => 'wizard_add',
+                            ),
                     ],
                     'edit' => [
                         'type' => 'popup',
                         'title' => 'Edit',
-                        'script' => 'wizard_edit.php',
+                        'module' => array(
+                                'name' => 'wizard_edit',
+                        ),
                         'popup_onlyOpenIfSelected' => 1,
                         'icon' => 'edit2.gif',
                         'JSopenParams' => 'height=350,width=580,status=0,menubar=0,scrollbars=1',
@@ -1071,7 +1098,12 @@ return [
                         'type' => 'popup',
                         'title' => 'Link',
                         'icon' => 'link_popup.gif',
-                        'script' => 'browse_links.php?mode=wizard',
+			'module' => array(
+				'name' => 'wizard_element_browser',
+				'urlParameters' => array(
+					'mode' => 'wizard',
+				)
+			),
                         'JSopenParams' => 'height=300,width=500,status=0,menubar=0,scrollbars=1',
                     ],
                 ],
